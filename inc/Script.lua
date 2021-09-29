@@ -189,7 +189,7 @@ local url , res = https.request(ApiToken..'/getChatAdministrators?chat_id='..msg
 local get = JSON.decode(url)
 for k,v in pairs(get.result) do
 if v.status == "creator" and v.user.first_name ~= "" then
-return sendMsg(msg.chat_id_,msg.id_,"المالك :\n["..v.user.first_name.."](t.me/"..(v.user.username or "iH7SaN"))
+return sendMsg(msg.chat_id_,msg.id_,"المنشئ :\n["..v.user.first_name.."](t.me/"..(v.user.username or "iH7SaN"))
 end
 end
 
