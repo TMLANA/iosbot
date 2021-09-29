@@ -1209,10 +1209,10 @@ redis:del(amrko..":Start_Rolet:"..msg.chat_id_..msg.sender_user_id_)
 return sendMsg(msg.chat_id_,msg.id_,Text)    
 end
 if msg.text:match('^(@[%a%d_]+)$') and redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_) then    --// استقبال الاسماء
-if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,msg.text) then
+if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,msg.text:lower()) then
 return sendMsg(msg.chat_id_,msg.id_,'*📮│* المعرف {['..msg.text..']} موجود اساسا' )
 end
-redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,msg.text)
+redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,msg.text:lower())
 local CountAdd = redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_)
 local CountAll = redis:scard(amrko..':List_Rolet:'..msg.chat_id_)
 local CountUser = CountAdd - CountAll
