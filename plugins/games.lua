@@ -1209,19 +1209,19 @@ redis:del(amrko..":Start_Rolet:"..msg.chat_id_..msg.sender_user_id_)
 return sendMsg(msg.chat_id_,msg.id_,Text)    
 end
 if msg.text:match('^(@[%a%d_]+)$') and redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_) then    --// استقبال الاسماء
-if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,msg.text:lower()) then
+if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,msg.text) then
 return sendMsg(msg.chat_id_,msg.id_,'*📮│* المعرف {['..msg.text..']} موجود اساسا' )
 end
-redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,msg.text:lower())
+redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,msg.text)
 local CountAdd = redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_)
 local CountAll = redis:scard(amrko..':List_Rolet:'..msg.chat_id_)
 local CountUser = CountAdd - CountAll
 if tonumber(CountAll) == tonumber(CountAdd) then 
 redis:del(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_) 
 redis:setex(amrko..":Witting_StartGame:"..msg.chat_id_..msg.sender_user_id_,1400,true)  
-return sendMsg(msg.chat_id_,msg.id_,"*📮╿*تم ادخال المعرف { ["..msg.text:lower().."] } \n🔖*│*وتم اكتمال العدد الكلي \n📛╽هل انت مستعد ؟ اجب بـ {* نعم *}")
+return sendMsg(msg.chat_id_,msg.id_,"*📮╿*تم ادخال المعرف { ["..msg.text.."] } \n🔖*│*وتم اكتمال العدد الكلي \n📛╽هل انت مستعد ؟ اجب بـ {* نعم *}")
 end 
-return sendMsg(msg.chat_id_,msg.id_,"*📮╿* تم ادخال المعرف { ["..msg.text:lower().."] } \n🔖│تبقى { *"..CountUser.."* } لاعبين ليكتمل العدد\n📑╽ارسل المعرف التالي ")
+return sendMsg(msg.chat_id_,msg.id_,"*📮╿* تم ادخال المعرف { ["..msg.text.."] } \n🔖│تبقى { *"..CountUser.."* } لاعبين ليكتمل العدد\n📑╽ارسل المعرف التالي ")
 end
 end 
 if redis:get(amrko.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_) then 
