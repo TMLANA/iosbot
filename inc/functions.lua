@@ -1023,6 +1023,7 @@ end
 
 function UpdateSource(msg,edit)
 if edit then EditMsg(msg.chat_id_,msg.id_,'10% - |█          |') end
+download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/plugins/games.lua','./plugins/games.lua')
 if edit then EditMsg(msg.chat_id_,msg.id_,'20% - |███         |') end
 download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/Run.lua','./inc/Run.lua')
 if edit then EditMsg(msg.chat_id_,msg.id_,'40% - |█████       |') end
