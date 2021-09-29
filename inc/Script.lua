@@ -3166,7 +3166,7 @@ end
 
 
 if MsgText[1] == 'نسخه احتياطيه للمجموعات' then
-if not msg.SudoBase then return"📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
+if not msg.SudoBase then return"📪¦ هذا الامر يخص {المطور الاساسي} فقط \n" end
 return buck_up_groups(msg)
 end 
 
