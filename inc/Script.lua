@@ -192,6 +192,13 @@ if v.status == "creator" and v.user.first_name ~= "" then
 return sendMsg(msg.chat_id_,msg.id_,"المالك :\n["..v.user.first_name.."](t.me/"..(v.user.username or "iH7SaN"))
 end
 end
+if MsgText[1] == "المشرفين" then
+local url , res = https.request(ApiToken..'/getChatAdministrators?chat_id='..msg.chat_id_)
+local get = JSON.decode(url)
+for k,v in pairs(get.result) do
+return sendMsg(msg.chat_id_,msg.id_,"المشرف :\n["..v.user.first_name.."](t.me/"..(v.user.username or "iH7SaN"))
+end
+end
 
 message = ""
 local monsha = redis:smembers(amrko..':MONSHA_Group:'..msg.chat_id_)
