@@ -1202,17 +1202,17 @@ if msg.text:match("^(%d+)$") and redis:get(amrko..":Start_Rolet:"..msg.chat_id_.
 if msg.text == "1" then
 Text = "*📮│* لا استطيع بدء اللعبه بلاعب واحد فقط\n"
 else
-redis:set(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_,msg.text)  
+redis:set(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_,string.lower(msg.text))  
 Text = '💬╿تم بدء تسجيل اللسته \n💱│يرجى ارسال المعرفات \n🎊│الفائز يحصل على (5) مجوهره\n🎯╽عدد الاعبين المطلوبه { *'..msg.text..'* } لاعب \n 🏹'
 end
 redis:del(amrko..":Start_Rolet:"..msg.chat_id_..msg.sender_user_id_)  
 return sendMsg(msg.chat_id_,msg.id_,Text)    
 end
 if msg.text:match('^(@[%a%d_]+)$') and redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_) then    --// استقبال الاسماء
-if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,msg.text) then
+if redis:sismember(amrko..':List_Rolet:'..msg.chat_id_,string.lower(msg.text)) then
 return sendMsg(msg.chat_id_,msg.id_,'*📮│* المعرف {['..msg.text..']} موجود اساسا' )
 end
-redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,msg.text)
+redis:sadd(amrko..':List_Rolet:'..msg.chat_id_,string.lower(msg.text))
 local CountAdd = redis:get(amrko..":Number_Add:"..msg.chat_id_..msg.sender_user_id_)
 local CountAll = redis:scard(amrko..':List_Rolet:'..msg.chat_id_)
 local CountUser = CountAdd - CountAll
