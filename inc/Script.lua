@@ -3159,6 +3159,7 @@ else
 UpdateSourceStart = true
 sendMsg(msg.chat_id_,msg.id_,'🔛*¦* يوجد تحديث جديد الان \n📡*¦* جاري تنزيل وتثبيت التحديث  ...')
 redis:set(amrko..":VERSION",GetVerison)
+return false
 end
 return false
 end
@@ -3228,7 +3229,7 @@ return 'الاحصائيات : 📈 \n\n👥*¦* عدد المجموعات ال�
 end
 ---------------[End Function data] -----------------------
 if MsgText[1]=="اضف رد عام" or MsgText[1]=="اضف رد عام ➕" then
-if not msg.SudoBase then return"📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
+if not msg.SudoUser then return"📪¦ هذا الامر يخص {المطور} فقط  \n" end
 redis:setex(amrko..'addrd_all:'..msg.chat_id_..msg.sender_user_id_,300,true)
 redis:del(amrko..'allreplay:'..msg.chat_id_..msg.sender_user_id_)
 return "📭¦ حسننا الان ارسل كلمة الرد العام 🍃\n"
