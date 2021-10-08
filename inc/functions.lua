@@ -1015,16 +1015,17 @@ end
 ----------------------{ End Api Token Bot }-----------------------------
 
 function UpdateSource(msg,edit)
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 if edit then EditMsg(msg.chat_id_,msg.id_,'10% - |█          |') end
 print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/plugins/games.lua','./plugins/games.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'20% - |███         |') end
-download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/Run.lua','./inc/Run.lua')
+print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/Run.lua','./inc/Run.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'40% - |█████       |') end
-download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/locks.lua','./inc/locks.lua')
+print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/locks.lua','./inc/locks.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'60% - |███████     |') end
-download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/Script.lua','./inc/Script.lua')
+print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/Script.lua','./inc/Script.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'80% - |█████████   |') end
-download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/functions.lua','./inc/functions.lua')
+print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/inc/functions.lua','./inc/functions.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'100% - |█████████████|\n\n🔝-* تم تحديث السورس الى اصدار *v'..redis:get(amrko..":VERSION")..'*\n📟-* تم اعاده تشغيل السورس بنجاح') end
 if edit then dofile("./inc/Run.lua") end
 print("Update Source And Reload ~ ./inc/Run.lua")
