@@ -3146,21 +3146,11 @@ if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' the
 return '👨🏾‍🔧¦ اصدار سورس حسن : *v'..version..'* \n📡'
 end
 
-if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™' or MsgText[1] == 'التحديث') then
+if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™') then
 if not msg.SudoBase then return "📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
-local GetVerison = https.request('https://raw.githubusercontent.com/marrcoo/MarcoFiles/master/GetVersion.txt') or "0"
-GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
-if GetVerison > version then
 UpdateSourceStart = true
 sendMsg(msg.chat_id_,msg.id_,'🔛*¦* يوجد تحديث جديد الان \n📡*¦* جاري تنزيل وتثبيت التحديث  ...')
 redis:set(amrko..":VERSION",GetVerison)
-return false
-else
-UpdateSourceStart = true
-sendMsg(msg.chat_id_,msg.id_,'🔛*¦* يوجد تحديث جديد الان \n📡*¦* جاري تنزيل وتثبيت التحديث  ...')
-redis:set(amrko..":VERSION",GetVerison)
-return false
-end
 return false
 end
 
