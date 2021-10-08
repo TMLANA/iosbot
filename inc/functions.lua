@@ -618,7 +618,7 @@ end
 
 function CheckUserAdmin(msg)
 local Adminn = false
-if msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1890819157 or msg.sender_user_id_ == 332717942 then 
+if msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 706097010 or msg.sender_user_id_ == 706097010 then 
 Adminn = true
 elseif redis:sismember(amrko..':SUDO_BOT:',msg.sender_user_id_) then 
 Adminn = true
@@ -1350,7 +1350,7 @@ end
 function Get_Rtb(msg,rtba)
 local SudoBase,SudoUser,Creator,SuperCreator,Director = false,false,false,false,false
 result = false
-if msg.sender_user_id_ == 1890819157 or msg.sender_user_id_ == 332717942 then 
+if msg.sender_user_id_ == 706097010 or msg.sender_user_id_ == 706097010 then 
 SudoBase = true
 elseif msg.sender_user_id_ == SUDO_ID then 
 SudoBase = true
@@ -1403,7 +1403,7 @@ end
 function Getrtba(UserID,ChatID)
 if UserID == our_id then 
 var = 'هذا البوت 🙄☝🏿' 
-elseif UserID == 1890819157 or UserID == 332717942  then 
+elseif UserID == 706097010 or UserID == 706097010  then 
 var = 'مطور السورس'
 elseif  UserID == SUDO_ID then
 var = redis:get(amrko..":RtbaNew1:"..ChatID) or 'مطور اساسي' 
@@ -2244,7 +2244,7 @@ if UserID == our_id then
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد البوت  ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
-elseif UserID == 1890819157 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد مطور السورس ؛") 
 elseif redis:sismember(amrko..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد المطور ؛") 
@@ -2399,7 +2399,7 @@ end
 if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر البوت  ؛") 
-elseif UserID == 1890819157 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر المطور الاساسي ؛") 
@@ -2428,7 +2428,7 @@ end
 if cmd == "kick" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك طرد البوت ؛") 
-elseif UserID == 1890819157 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك طرد مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
@@ -2471,7 +2471,7 @@ end
 if cmd == "ktm" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك كتم البوت ؛") 
-elseif UserID == 1890819157 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك كتم مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك كتم المطور الاساسي ؛") 
@@ -2530,7 +2530,7 @@ end
 if cmd == "bandall" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر البوت  ؛") 
-elseif UserID == 1890819157 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
@@ -2576,7 +2576,7 @@ end
 --========================================================================
 if cmd == "DwnAll" then ----------- تنزيل الكل
 if UserID == our_id then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر مع البوت ❕") end
-if UserID == 1890819157 or UserID == 332717942 then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر ضد مطور السورس ❕") end
+if UserID == 706097010 or UserID == 706097010 then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر ضد مطور السورس ❕") end
 
 if UserID == SUDO_ID then 
 rinkuser = 1

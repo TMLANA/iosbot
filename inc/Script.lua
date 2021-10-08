@@ -281,7 +281,7 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"📛*¦* �
 local UserID = data.sender_user_id_
 if UserID == our_id then  
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكن تقييد البوت  \n📛") 
-elseif UserID == 332717942 or UserID == 332717942  then  
+elseif UserID == 706097010 or UserID == 706097010  then  
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك تقييد مطور السورس\n📛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك تقييد المطور الاساسي\n🛠") 
@@ -322,7 +322,7 @@ local UserID = data.id_
 NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك تقييد البوت\n🛠") 
-elseif  UserID == 332717942 or UserID == 332717942  then 
+elseif  UserID == 706097010 or UserID == 706097010  then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك تقييد مطور السورس\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك تقييد المطور الاساسي\n🛠") 
@@ -359,7 +359,7 @@ elseif MsgText[2] and MsgText[2]:match('^%d+$') then  -- By UserID
 UserID =  MsgText[2] 
 if UserID == our_id then   
 return sendMsg(msg.chat_id_,msg.id_,"👤*¦* لا يمكنك تقييد البوت\n🛠") 
-elseif UserID == "332717942" or UserID == "332717942" then 
+elseif UserID == "706097010" or UserID == "706097010" then 
 return sendMsg(msg.chat_id_,msg.id_,"⚜️*¦* لا يمكنك تقييد مطور السورس\n🛠") 
 elseif UserID == tostring(SUDO_ID) then 
 return sendMsg(msg.chat_id_,msg.id_,"👤*¦* لا يمكنك تقييد المطور الاساسي\n🛠") 
@@ -905,7 +905,7 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"📛*¦* �
 local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك طرد البوت\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك طرد مطور السورس\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك طرد المطور الاساسي\n🛠") 
@@ -944,7 +944,7 @@ UserName = arg.UserName
 NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك طرد البوت\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك طرد مطور السورس\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك طرد المطور الاساسي\n🛠") 
@@ -991,7 +991,7 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠") 
 elseif redis:sismember(amrko..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور\n🛠") 
@@ -1040,7 +1040,7 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠") 
 elseif redis:sismember(amrko..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور\n🛠") 
@@ -1225,7 +1225,7 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم المطور الاساسي\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك كتم مطور السورس\n🛠") 
 elseif redis:sismember(amrko..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم المطور\n🛠") 
@@ -1264,7 +1264,7 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم المطور الاساسي\n🛠") 
-elseif UserID == 332717942 or UserID == 332717942 then 
+elseif UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك كتم مطور السورس\n🛠") 
 elseif redis:sismember(amrko..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك كتم المطور\n🛠") 
@@ -2374,7 +2374,7 @@ NameUser = Hyper_Link_Name(data)
 msg = arg.msg
 UserID = msg.UserID
 if UserID == our_id then return sendMsg(msg.chat_id_,msg.id_,"📛*¦* لآ يمكنك تنفيذ الامر مع البوت\n❕") end
-if UserID == 332717942 or UserID == 332717942 then return sendMsg(msg.chat_id_,msg.id_,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور السورس \n❕") end
+if UserID == 706097010 or UserID == 706097010 then return sendMsg(msg.chat_id_,msg.id_,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور السورس \n❕") end
 
 if UserID == SUDO_ID then 
 rinkuser = 1
@@ -2473,7 +2473,7 @@ local UserID = data.id_
 if UserID == our_id then return sendMsg(arg.ChatID,arg.MsgID,"📛*¦* لآ يمكنك تنفيذ الامر مع البوت\n❕") end
 
 msg = arg.msg
-if UserID == 332717942 or UserID == 332717942 then return sendMsg(msg.chat_id_,msg.id_,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور السورس \n❕") end
+if UserID == 706097010 or UserID == 706097010 then return sendMsg(msg.chat_id_,msg.id_,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور السورس \n❕") end
 NameUser = Hyper_Link_Name(data)
 
 if UserID == SUDO_ID then 
@@ -2999,7 +2999,7 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"📛*¦* �
 local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
-elseif  UserID == 332717942 or UserID == 332717942 then 
+elseif  UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠")
@@ -3029,7 +3029,7 @@ NameUser = Hyper_Link_Name(data)
 
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
-elseif  UserID == 332717942 or UserID == 332717942 then 
+elseif  UserID == 706097010 or UserID == 706097010 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠")
@@ -3403,7 +3403,7 @@ end
 ----=================================|كود الرد العشوائي العام|===============================================
 
 if MsgText[1]=="اضف رد عشوائي عام" then
-if not msg.SudoUser then return "📪¦ هذا الامر يخص {المطور} فقط  \n" end
+if not msg.SudoBase then return "📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
 redis:setex(amrko..'addrdRandom1Public:'..msg.chat_id_..msg.sender_user_id_,1400,true) 
 redis:del(amrko..'replay1RandomPublic'..msg.chat_id_..msg.sender_user_id_)
 return "📭¦ حسننا ,  الان ارسل كلمه الرد للعشوائي العام \n-"
@@ -3411,7 +3411,7 @@ end
 
 
 if MsgText[1]== "مسح رد عشوائي عام" then
-if not msg.SudoUser then return "📪¦ هذا الامر يخص {المطور} فقط  \n" end
+if not msg.SudoBase then return "📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
 redis:setex(amrko..':DelrdRandomPublic:'..msg.chat_id_..msg.sender_user_id_,300,true)
 return "📭¦ حسننا عزيزي  ✋🏿\n🗯¦ الان ارسل الرد العشوائي العام لمسحها 🍃"
 end
