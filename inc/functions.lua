@@ -639,7 +639,7 @@ end
 function CheckUserDev(msg)
 local Adminn = false
 if msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 706097010 or msg.sender_user_id_ == 706097010 then 
-Adminn = true
+Adminn = false
 elseif redis:sismember(amrko..':SUDO_BOT:',msg.sender_user_id_) then 
 Adminn = false
 elseif redis:sismember(amrko..':Malk_Group:'..msg.chat_id_,msg.sender_user_id_) then 
