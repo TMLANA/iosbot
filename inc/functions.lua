@@ -147,8 +147,9 @@ end
 
 keyboardCmd = [[{
 "inline_keyboard": [
-[{"text": "م1","callback_data": "List1"},{"text": "م2","callback_data": "List2"},{"text": "م3","callback_data": "List3"}],
-[{"text": "اوامر المطور","callback_data": "CmdSudo"},{"text": "اوامر الردود","callback_data": "List4"},{"text": "اوامر الأعضاء","callback_data": "List5"}],
+[{"text": "م1","callback_data": "List1"},{"text": "م2","callback_data": "List2"}],
+[{"text": "م3","callback_data": "List3"},{"text": "اوامر الأعضاء","callback_data": "List5"}],
+[{"text": "اوامر المطور","callback_data": "CmdSudo"},{"text": "اوامر الردود","callback_data": "List4"}],
 [{"text": "- اخفاء الامر","callback_data": "LoginOut"}]
 ]}
 ]]
