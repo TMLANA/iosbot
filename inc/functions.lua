@@ -633,7 +633,7 @@ Adminn = true
 elseif redis:sismember(amrko..'admins:'..msg.chat_id_,msg.sender_user_id_) then 
 Adminn = true
 end
-return false
+return true
 end
 
 function sendMsg(chat_id,reply_id,text,funcb)
