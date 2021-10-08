@@ -66,9 +66,6 @@ return UpdateM6Query(msg)
 elseif TextCmdquery == "CmdSudo" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM5Query(msg)
-elseif TextCmdquery == "CmdFiles" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
-return UpdateM6Query(msg)
 elseif TextCmdquery == "LoginOut" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 msg.Delete = true
