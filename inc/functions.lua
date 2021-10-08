@@ -147,9 +147,8 @@ end
 
 keyboardCmd = [[{
 "inline_keyboard": [
-[{"text": "م1","callback_data": "List1"},{"text": "م2","callback_data": "List2"}],
-[{"text": "م3","callback_data": "List3"},{"text": "م4","callback_data": "List5"}],
-[{"text": "اوامر المطور","callback_data": "CmdSudo"},{"text": "اوامر الردود","callback_data": "List4"}],
+[{"text": "م1","callback_data": "List1"},{"text": "م2","callback_data": "List2"},{"text": "م3","callback_data": "List3"}],
+[{"text": "اوامر المطور","callback_data": "CmdSudo"},{"text": "اوامر الردود","callback_data": "List4"},{"text": "اوامر الأعضاء","callback_data": "List5"}],
 [{"text": "- اخفاء الامر","callback_data": "LoginOut"}]
 ]}
 ]]
@@ -188,7 +187,8 @@ list_settings = '{"inline_keyboard": ['
 ..'[{"text": "- رجوع »","callback_data": "CmdBack"},{"text": "- اخفاء الامر","callback_data": "LoginOut"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
-textMD = [[❖┇اوامر الخدمه  ✓
+textMD = [[
+❖┇اوامر الخدمه  ✓
 
 ❖┇ ايدي ⇜ لعرض صورتك + معلوماتك 
 ❖┇ ايديي ⇜ لعرض ايديك 
@@ -204,9 +204,6 @@ textMD = [[❖┇اوامر الخدمه  ✓
 ❖┇ التفاعل+المعرف ⇜تفاعل الشخص 
 ❖┇ كشف بالرد ⇜ معلومات حسابه
 ❖┇ كشف بالمعرف ⇜ معلومات حسابه 
-❖┇ طرد البوتات ⇜ لطرد كل البوتات
-❖┇ طرد المحذوفين ⇜ لطرد المحذوفين
-❖┇ كشف البوتات ⇜ عدد البوتات 
 ❖┇ رابط الحذف ⇜ لحذف حسابك
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
