@@ -839,7 +839,7 @@ if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد 
 SendMention(arg.ChatID,arg.UserID,arg.MsgID,'🤵🏼¦ الاسم » '..namei..'\n'
 ..'🎫¦ الايدي » {'..arg.UserID..'} \n'
 ..'🎟¦ المعرف » '..useri..'\n'
-..'📮¦ الرتبه » '..msg.TheRank..'\n'
+..'📮¦ الرتبه » '..Getrtba(arg.UserID,arg.ChatID)..'\n'
 ..'🕵🏻️‍♀️¦ نوع الكشف » بالرد\n➖',13,utf8.len(namei))
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
@@ -2050,7 +2050,7 @@ Getrtb = Getrtba(arg.UserID,arg.ChatID)
 GetUserID(arg.UserID,function(arg,data)
 USERNAME = ResolveUserName(data)
 USERCAR  = utf8.len(USERNAME)
-SendMention(arg.ChatID,arg.UserID,arg.MsgID,'👤¦ العضو » '..USERNAME..'\n\nـ⠀•⊱ { رتـبـه الشخص } ⊰•\n\n🤖¦ في البوت » '..msg.TheRank..' \n📋¦ في المجموعه » '..arg.SudoGroups..'\n✓',12,utf8.len(USERNAME)) 
+SendMention(arg.ChatID,arg.UserID,arg.MsgID,'👤¦ العضو » '..USERNAME..'\n\nـ⠀•⊱ { رتـبـه الشخص } ⊰•\n\n🤖¦ في البوت » '..arg.Getrtb..' \n📋¦ في المجموعه » '..arg.SudoGroups..'\n✓',12,utf8.len(USERNAME)) 
 end,{ChatID=arg.ChatID,UserID=arg.UserID,MsgID=arg.MsgID,Getrtb=Getrtb,SudoGroups=SudoGroups})
 end,{ChatID=arg.ChatID,UserID=data.sender_user_id_,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
