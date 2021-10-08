@@ -3146,7 +3146,7 @@ if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' the
 return '👨🏾‍🔧¦ اصدار سورس حسن : *v'..version..'* \n📡'
 end
 
-if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™' or MsgText[1] == 'بوتتت') then
+if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™' or MsgText[1] == 'بوت ت') then
 if not msg.SudoBase then return "📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
 local GetVerison = https.request('https://raw.githubusercontent.com/marrcoo/MarcoFiles/master/GetVersion.txt') or "0"
 GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
