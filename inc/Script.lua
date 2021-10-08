@@ -3740,7 +3740,6 @@ sendMsg(msg.chat_id_,msg.id_,textD)
 end,{msg=msg})
 return false
 end
-end    
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
