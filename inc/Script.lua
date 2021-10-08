@@ -3667,6 +3667,49 @@ end,{msg=msg})
 return false
 end
 
+
+if MsgText[1]== 'م2' then
+if not msg.Admin then return "- هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
+SUDO_USER = redis:hgetall(amrko..'username:'..SUDO_ID).username
+
+local text = [[ اهلا بك في قائمة اوامر المجموعه
+للاستفسار - []]..SUDO_USER..[[]
+❖┇اوامر الخدمه  ✓
+
+❖┇ ايدي ⇜ لعرض صورتك + معلوماتك 
+❖┇ ايديي ⇜ لعرض ايديك 
+❖┇ ايدي بالرد ⇜ لعرض ايدي الشخص 
+❖┇ جهاتي ⇜ لمعرفه عدد جهاتك 
+❖┇ الرابط ⇜ لسخراج رابط المجموعه
+❖┇ معلوماتي ⇜ لعرض معلوماتك 
+❖┇ الالعاب ⇜ لعرض العاب البوت 
+❖┇ نقاطي ⇜ لمعرفه عدد نقاطك
+❖┇ بيع نقاطي + العدد ⇜ لبيع نقاطك 
+❖┇ السورس ⇜ لعرض سورس البوت 
+❖┇ الرتبه بالرد ⇜ لمعرفه رتبة الشخص
+❖┇ التفاعل+المعرف ⇜تفاعل الشخص 
+❖┇ كشف بالرد ⇜ معلومات حسابه
+❖┇ كشف بالمعرف ⇜ معلومات حسابه 
+❖┇ طرد البوتات ⇜ لطرد كل البوتات
+❖┇ طرد المحذوفين ⇜ لطرد المحذوفين
+❖┇ كشف البوتات ⇜ عدد البوتات 
+❖┇ رابط الحذف ⇜ لحذف حسابك
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ ]]
+
+GetUserID(msg.sender_user_id_,function(arg,data)
+msg = arg.msg
+local textD = redis:get(amrko..":awamer_Klesha_m2:")
+if textD then
+textD = Flter_Markdown(convert_Klmat(msg,data,textD,true))
+else
+textD = text
+end
+sendMsg(msg.chat_id_,msg.id_,textD)
+end,{msg=msg})
+return false
+end
+
+
 if MsgText[1]== 'م3' then
 if not msg.Admin then return "- هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
 SUDO_USER = redis:hgetall(amrko..'username:'..SUDO_ID).username
