@@ -543,11 +543,11 @@ GetUserID(UserID,function(arg,data)
 ReUsername = ResolveUserName(data)
 NameUser = Hyper_Link_Name(data)
 
-if redis:sismember(amrko..'owners:'..arg.ChatID,arg.UserID) then 
+if redis:sismember(amrko..':MONSHA_BOT:'..arg.ChatID,arg.UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"📮¦ المستخدم  »「 "..NameUser.." 」 \n📋¦ تم بالتأكيد رفعه مدير  في المجموعه")
 else
 redis:hset(amrko..'username:'..arg.UserID,'username',ReUsername)
-redis:sadd(amrko..'owners:'..arg.ChatID,UserID)
+redis:sadd(amrko..':MONSHA_BOT:'..arg.ChatID,UserID)
 return sendMsg(arg.ChatID,arg.MsgID,"📮¦ المستخدم  »「 "..NameUser.." 」 \n📋¦ تم رفعه مدير  في المجموعه") 
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -630,11 +630,11 @@ GetUserID(UserID,function(arg,data)
 ReUsername = ResolveUserName(data):gsub([[\_]],"_")
 NameUser = Hyper_Link_Name(data)
 
-if redis:sismember(amrko..':MONSHA_BOT:'..arg.ChatID,arg.UserID) then 
+if redis:sismember(amrko..'owners:'..arg.ChatID,arg.UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"📮¦ المستخدم  »「 "..NameUser.." 」 \n📋¦ تم بالتأكيد رفعه منشئ  في المجموعه") 
 else
 redis:hset(amrko..'username:'..arg.UserID,'username',ReUsername)
-redis:sadd(amrko..':MONSHA_BOT:'..arg.ChatID,arg.UserID)
+redis:sadd(amrko..'owners:'..arg.ChatID,arg.UserID)
 return sendMsg(arg.ChatID,arg.MsgID,"📮¦ المستخدم  »「 "..NameUser.." 」 \n📋¦ تم رفعه منشئ  في المجموعه") 
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
