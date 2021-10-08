@@ -1015,6 +1015,7 @@ end
 ----------------------{ End Api Token Bot }-----------------------------
 
 function UpdateSource(msg,edit)
+print("-"*70)
 if edit then EditMsg(msg.chat_id_,msg.id_,'10% - |█          |') end
 print(download_file('https://raw.githubusercontent.com/iH7San/iosbot/master/plugins/games.lua','./plugins/games.lua'))
 if edit then EditMsg(msg.chat_id_,msg.id_,'20% - |███         |') end
