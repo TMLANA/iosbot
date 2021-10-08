@@ -3697,7 +3697,7 @@ local text = [[ اهلا بك في قائمة اوامر المجموعه
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
-local textD = redis:get(amrko..":awamer_Klesha_m2:")
+local textD = redis:get(amrko..":awamer_Klesha_m4:")
 if textD then
 textD = Flter_Markdown(convert_Klmat(msg,data,textD,true))
 else
@@ -4479,7 +4479,7 @@ elseif amr == "م2" then
 redis:set(amrko..":awamer_Klesha_m2:",msg.text)
 elseif amr == "م3" then
 redis:set(amrko..":awamer_Klesha_m3:",msg.text)
-elseif amr == "م3" then
+elseif amr == "م4" then
 redis:set(amrko..":awamer_Klesha_m4:",msg.text)
 elseif amr == "م المطور" then
 redis:set(amrko..":awamer_Klesha_mtwr:",msg.text)
