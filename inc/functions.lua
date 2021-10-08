@@ -64,7 +64,7 @@ elseif TextCmdquery == "List5" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM6Query(msg)
 elseif TextCmdquery == "CmdSudo" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM5Query(msg)
 elseif TextCmdquery == "LoginOut" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
@@ -636,6 +636,25 @@ end
 return Adminn 
 end
 
+function CheckUserDev(msg)
+local Adminn = false
+if msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 706097010 or msg.sender_user_id_ == 706097010 then 
+Adminn = true
+elseif redis:sismember(amrko..':SUDO_BOT:',msg.sender_user_id_) then 
+Adminn = false
+elseif redis:sismember(amrko..':Malk_Group:'..msg.chat_id_,msg.sender_user_id_) then 
+Adminn = false
+elseif redis:sismember(amrko..':MONSHA_BOT:'..msg.chat_id_,msg.sender_user_id_) then 
+Adminn = false
+elseif redis:sismember(amrko..':MONSHA_Group:'..msg.chat_id_,msg.sender_user_id_) then 
+Adminn = false
+elseif redis:sismember(amrko..'owners:'..msg.chat_id_,msg.sender_user_id_) then 
+Adminn = false
+elseif redis:sismember(amrko..'admins:'..msg.chat_id_,msg.sender_user_id_) then 
+Adminn = false
+end
+return Adminn 
+end
 
 
 function sendMsg(chat_id,reply_id,text,funcb)
