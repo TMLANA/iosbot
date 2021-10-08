@@ -3668,7 +3668,7 @@ return false
 end
 
 
-if MsgText[1]== 'م2' then
+if MsgText[1]== 'م4' then
 if not msg.Admin then return "- هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
 SUDO_USER = redis:hgetall(amrko..'username:'..SUDO_ID).username
 
