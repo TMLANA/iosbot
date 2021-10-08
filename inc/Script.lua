@@ -2678,7 +2678,7 @@ end
 
 if MsgText[1] == 'تعيين قائمه الاوامر' then 
 redis:setex(amrko..":Witting_awamr_witting"..msg.chat_id_..msg.sender_user_id_,1000,true)
-return '📮*¦* ارسل امر القائمه المراد تعيينهم مثل الاتي "\n¦`الاوامر` , `م1` , `م2 `, `م3 `, `م المطور ` , `اوامر الرد `,  `اوامر الملفات` \n➼' 
+return '📮*¦* ارسل امر القائمه المراد تعيينهم مثل الاتي "\n¦`الاوامر` , `م1` , `م2 ` ,`م4 `,  `م3 `, `م المطور ` , `اوامر الرد `,  `اوامر الملفات` \n➼' 
 end
 
 
@@ -3501,7 +3501,7 @@ end
 
 if msg.type == 'channel' and msg.GroupActive then
 
-if msg.SudoBase and (MsgText[1]=="م1" or MsgText[1]=="م2" or MsgText[1]=="م3" or MsgText[1]=="م المطور" or MsgText[1]=="اوامر الرد" or MsgText[1]=="الاوامر" or MsgText[1]=="اوامر الملفات") and redis:get(amrko..":Witting_awamr_witting"..msg.chat_id_..msg.sender_user_id_) then 
+if msg.SudoBase and (MsgText[1]=="م1" or MsgText[1]=="م2" or MsgText[1]=="م3" or MsgText[1]=="م4" or MsgText[1]=="م المطور" or MsgText[1]=="اوامر الرد" or MsgText[1]=="الاوامر" or MsgText[1]=="اوامر الملفات") and redis:get(amrko..":Witting_awamr_witting"..msg.chat_id_..msg.sender_user_id_) then 
 redis:del(amrko..":Witting_awamr_witting"..msg.chat_id_..msg.sender_user_id_)
 redis:setex(amrko..":changawmer:"..msg.chat_id_..msg.sender_user_id_,900,MsgText[1])
 sendMsg(msg.chat_id_,msg.id_,"🔖¦ حسننا لتعيين كليشة الـ *"..MsgText[1].."* \n📮¦ ارسل الكليشه الجديده الان \n\n علما يمكنك استخدام الاختصارات الاتي : \n \n{الاسم} : لوضع اسم المستخدم\n{الايدي} : لوضع ايدي المستخدم\n{المعرف} : لوضع معرف المستخدم \n{الرتبه} : لوضع نوع رتبه المستخدم \n{التفاعل} : لوضع تفاعل المستخدم \n{الرسائل} : لاضهار عدد الرسائل \n{النقاط} : لاضهار عدد النقاط \n{التعديل} : لاضهار عدد السحكات \n{البوت} : لاضهار اسم البوت\n{المطور} : لاضهار معرف المطور الاساسي\n➼")
@@ -3693,8 +3693,7 @@ local text = [[ اهلا بك في قائمة اوامر المجموعه
 ❖┇طرد البوتات ⇜ لطرد كل البوتات
 ❖┇طرد المحذوفين ⇜ لطرد المحذوفين
 ❖┇كشف البوتات ⇜ عدد البوتات 
-❖┇رابط الحذف ⇜ لحذف حسابك
-]]
+❖┇رابط الحذف ⇜ لحذف حسابك ]]
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -4472,7 +4471,7 @@ end
 
 
 if msg.Creator and redis:get(amrko..":changawmer:"..msg.chat_id_..msg.sender_user_id_) and not redis:get(amrko..":Witting_awamr_witting"..msg.chat_id_..msg.sender_user_id_) then 
-if msg.text=="م1" or msg.text=="م2" or msg.text=="م3" or msg.text=="م المطور" or msg.text=="اوامر الرد" or msg.text=="الاوامر" or msg.text=="اوامر الملفات" then return false end
+if msg.text=="م1" or msg.text=="م2" or msg.text=="م3" or msg.text=="م4" or msg.text=="م المطور" or msg.text=="اوامر الرد" or msg.text=="الاوامر" or msg.text=="اوامر الملفات" then return false end
 local amr = redis:get(amrko..":changawmer:"..msg.chat_id_..msg.sender_user_id_)
 if amr == "م1" then
 redis:set(amrko..":awamer_Klesha_m1:",msg.text)
@@ -6569,6 +6568,7 @@ amrko = {
 "^(م1)$",
 "^(م2)$",
 "^(م3)$", 
+"^(م4)$", 
 "^(/store)$", 
 "^(/files)$", 
 "^(قفل الصور بالتقييد)$",
