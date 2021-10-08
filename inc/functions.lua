@@ -40,34 +40,34 @@ local dataid = data.message_id_
 msg = data
 
 if TextCmdquery == "GroupSitting" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateGropSitting(msg)
 elseif TextCmdquery == "MediaSitting" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateMediaSitting(msg)
 elseif TextCmdquery == "OtherSetting" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateOtherSitting(msg)
 elseif TextCmdquery == "List1" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM1Query(msg)
 elseif TextCmdquery == "List2" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM2Query(msg)
 elseif TextCmdquery == "List3" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM3Query(msg)
 elseif TextCmdquery == "List4" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM4Query(msg)
 elseif TextCmdquery == "List5" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM6Query(msg)
 elseif TextCmdquery == "CmdSudo" then
 if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 return UpdateM5Query(msg)
 elseif TextCmdquery == "LoginOut" then
-if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
+if not CheckUserDev(msg) then return answerCallbackQuery(data.id_,"ليس لديك صلاحية التحكم , ارجو المعذرة ❤️",true) end
 msg.Delete = true
 msg.textmsg = "- تم اخفاء قائمة الاوامر"
 msg.Editeinline = true
